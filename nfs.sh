@@ -42,10 +42,6 @@ cat <<EOF > /var/www/html/owncloud/config/autoconfig.php
 );
 EOF
 
-# Cambiar color de fondo owncloud
-sed -i 's/background-color: .*/background-color: #add8e6;/'  /var/www/html/owncloud/core/css/styles.css
-
-
 # Configuración de PHP-FPM para escuchar en la IP del servidor NFS
 sed -i 's/^listen = .*/listen = 192.168.6.13:8080/' /etc/php/7.4/fpm/pool.d/www.conf
 
